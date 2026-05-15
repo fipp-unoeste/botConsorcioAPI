@@ -24,7 +24,7 @@ export default class DFCtrl{
             let resposta = {};
             const dados = req.body;
             let origem = dados?.originalDetectIntentRequest?.source;
-            if(!origem){
+            if(origem){
                 origem = "custom";
             }
             const intencao = dados?.queryResult?.intent?.displayName;
