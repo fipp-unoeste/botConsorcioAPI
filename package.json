@@ -1,0 +1,23 @@
+{
+  "name": "botconsorcioapi",
+  "version": "1.0.0",
+  "description": "API para ser consumida pelo Dialogflow através do ngrok",
+  "homepage": "https://github.com/fipp-unoeste/botConsorcioAPI#readme",
+  "bugs": {
+    "url": "https://github.com/fipp-unoeste/botConsorcioAPI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fipp-unoeste/botConsorcioAPI.git"
+  },
+  "license": "ISC",
+  "author": "Pedro Moraes",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
