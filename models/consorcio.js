@@ -66,6 +66,7 @@ export default class Consorcio {
     }
 
     async consultar(){
-        
+        const consorcioDB = new ConsorcioDB();
+        return await consorcioDB.consultar();
     }
 }
