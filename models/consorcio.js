@@ -2,11 +2,11 @@ import ConsorcioDB from "../DB/consorcioDB.js";
 
 export default class Consorcio {
     
-     #codigo;
-    #veiculo;
-    #plano;
-    #valor_parcela;
-    #imagem;
+        #codigo;
+        #veiculo;
+        #plano;
+        #valor_parcela;
+        #imagem;
 
     constructor(codigo, veiculo, plano, valor_parcela, imagem) {
         this.#codigo = codigo;

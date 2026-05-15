@@ -24,7 +24,7 @@ export default class ConsorcioCtrl{
         }
         else{
             res.status(405).json({
-                statys: false,
+                status: false,
                 mensagem: "metodo nao permitido"
             });
         }

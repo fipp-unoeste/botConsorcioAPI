@@ -1,22 +1,23 @@
 import obterConexao from "./conexao.js";
+import Consorcio from "../models/consorcio.js";
 
 export default class ConsorcioDB{
 
     async consultar(){
         const conexao = await obterConexao();
         const sql = 'SELECT * FROM consorcio';
-        const [resultados, campos ] =  await conexao.query();
+        const [resultados, campos ] =  await conexao.query(sql);
         const listaConsorcios = [];
         for(const resultado of resultados){
-            const consorcio = new Consorcio(
+            const con = new Consorcio(
                 resultado.codigo,
                 resultado.veiculo,
                 resultado.plano,
                 resultado.valor_parcela,
                 resultado.imagem
             )
-            listaConsorcios.push(consorcio);
+            listaConsorcios.push(con);
         }
-        return listaCorsorcios;
+        return listaConsorcios;
     }
 }
