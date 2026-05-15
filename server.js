@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import rotaConsorcio from './routes/rotaConsorcio.js';
+import rotaDF from './routes/rotaDF.js';
 
 
 dotenv.config();
@@ -11,6 +12,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/consorcio", rotaConsorcio);
+app.use("/webhook", rotaDF);
 
 
 app.listen(porta, host, () =>{

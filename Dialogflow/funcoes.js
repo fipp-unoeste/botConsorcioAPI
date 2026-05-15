@@ -42,10 +42,17 @@ export default async function obterCardsConsorcios(tipoCard="custom"){
             cardCustom.card.title = consorcio.codigo;
             cardCustom.card.subtitle = consorcio.veiculo
             cardCustom.card.imageUri = consorcio.imagem;
-            cards.push(cardCustom);
+           cards.push(cardCustom);
         }
         else{
-
+            const cardMessenger = criarMessengerCard();
+            cardMessenger.type = "info";
+            cardMessenger.title = consorcio.codigo;
+            cardMessenger.subtitle = consorcio.veiculo;
+            cardMessenger.image.src.rawUrl = consorcio.imagem;
+            cards.push(cardMessenger);
         }
     }
+
+    return cards;
 }
