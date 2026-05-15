@@ -6,7 +6,7 @@ import rotaDF from './routes/rotaDF.js';
 
 dotenv.config();
 
-const porta = 5000;
+const porta = 3000;
 const host = '0.0.0.0';
 const app = express();
 app.use(express.json());

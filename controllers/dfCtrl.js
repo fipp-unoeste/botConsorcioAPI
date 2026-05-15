@@ -32,6 +32,10 @@ export default class DFCtrl{
                 case "EscolherVeiculo":
                     resposta = await apresentarMenu(origem);
                     break;
+                case "EscolherPlano":
+                    const veiculo = dados?.queryResult?.parameters?.veiculo;
+                    resposta = await apresentarPlanos(veiculo, origem);  
+                    break;    
             }
             res.json(resposta);
         }

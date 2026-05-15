@@ -43,6 +43,12 @@ export default async function obterCardsConsorcios(tipoCard="custom"){
             cardCustom.card.title = consorcio.codigo;
             cardCustom.card.subtitle = consorcio.veiculo
             cardCustom.card.imageUri = consorcio.imagem;
+            cardCustom.card.buttons = [
+                {
+                    text: "Escolher" + consorcio.veiculo,
+                    postback: "quero o " + consorcio.veiculo
+                }
+            ]
            cards.push(cardCustom);
         }
         else{
